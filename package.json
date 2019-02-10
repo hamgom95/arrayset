@@ -1,0 +1,29 @@
+{
+  "name": "@hamgom95/arrayset",
+  "version": "1.0.3",
+  "description": "set like array",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "scripts": {
+    "test": "mocha *.spec.js"
+  },
+  "keywords": [
+    "array",
+    "set",
+    "union",
+    "uniq"
+  ],
+  "author": {
+    "name": "Kevin Thomas",
+    "email": "hamgom95@gmail.com"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^5.2.0"
+  },
+  "files": [
+    "index.js",
+    "index.d.ts"
+  ]
+}
