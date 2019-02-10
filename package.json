@@ -1,6 +1,6 @@
 {
   "name": "@hamgom95/arrayset",
-  "version": "1.0.3",
+  "version": "2.0.0",
   "description": "set like array",
   "main": "index.js",
   "types": "index.d.ts",
