@@ -5,7 +5,10 @@
   "main": "index.js",
   "types": "index.d.ts",
   "scripts": {
-    "test": "mocha *.spec.js"
+    "test": "mocha *.spec.js",
+    "build:doc": "jsdoc src/*",
+    "build:readme": "jsdoc2md --heading-depth=3 --template README.tpl.md index.js > README.md",
+    "prepublish": "npm run build:readme"
   },
   "keywords": [
     "array",
@@ -20,7 +23,9 @@
   "license": "ISC",
   "devDependencies": {
     "chai": "^4.2.0",
-    "mocha": "^5.2.0"
+    "mocha": "^5.2.0",
+    "jsdoc": "^3.5.5",
+    "jsdoc-to-markdown": "^4.0.1"
   },
   "files": [
     "index.js",

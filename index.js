@@ -11,7 +11,8 @@ class ArraySet extends Array {
      * @param items Initial items.
      */
     constructor(...items) {
-        super(...uniqArray(items));
+        super();
+        for (const item of uniqArray(items)) this.push(item);
     }
 
     /**
@@ -20,7 +21,7 @@ class ArraySet extends Array {
      */
     uniq() {
         const items = uniqArray(this);
-        return this.constructor(...items);
+        return new this.constructor(...items);
     }
 
     /**
@@ -29,8 +30,8 @@ class ArraySet extends Array {
      * @returns Union-Set
      */
     union(...otherArrays) {
-        const items = flattenArray(otherArrays);
-        return this.constructor(...items);
+        const items = flattenArray([this, ...otherArrays]);
+        return new this.constructor(...items);
     }
 
     /**
@@ -39,8 +40,8 @@ class ArraySet extends Array {
      * @returns Intersection-Set
      */
     intersection(...otherArrays) {
-        const items = this.filter(item => otherArrays.reduce((acc, other) => acc && other.includes(item), true)).uniq();
-        return this.constructor(...items);
+        const items = this.filter(item => otherArrays.every(other => other.includes(item)));
+        return new this.constructor(...items);
     }
 
     /**
@@ -49,8 +50,8 @@ class ArraySet extends Array {
      * @returns Difference-Set
      */
     difference(...otherArrays) {
-        const items = this.filter(item => otherArrays.reduce((acc, other) => acc && !other.has(item), true)).uniq();
-        return this.constructor(...items);
+        const items = this.filter(item => !otherArrays.some(other => other.includes(item)));
+        return new this.constructor(...items);
     }
 
     /**
@@ -68,10 +69,10 @@ class ArraySet extends Array {
      * @returns If set is subset.
      */
     isSubset(...otherArrays) {
-        return this.every(item => otherArrays.every(other => other.has(item)));
+        return this.every(item => otherArrays.every(other => other.includes(item)));
     }
 }
 
 module.exports = {
     ArraySet
-}
+};
