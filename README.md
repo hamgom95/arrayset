@@ -1,12 +1,12 @@
-# @hamgom95/arrayset
+## @hamgom95/arrayset
 
 Set-like Array.
 
-## API Documentation
+### API Documentation
 
 <a name="ArraySet"></a>
 
-### ArraySet
+#### ArraySet
 Array with set-like functionality.
 
 **Kind**: global class  
@@ -22,7 +22,7 @@ Array with set-like functionality.
 
 <a name="new_ArraySet_new"></a>
 
-#### new ArraySet(...items)
+##### new ArraySet(...items)
 Create set with items.
 
 
@@ -32,14 +32,14 @@ Create set with items.
 
 <a name="ArraySet+uniq"></a>
 
-#### arraySet.uniq() ⇒
+##### arraySet.uniq() ⇒
 Filter out non unique items.
 
 **Kind**: instance method of [<code>ArraySet</code>](#ArraySet)  
 **Returns**: Uniq set  
 <a name="ArraySet+union"></a>
 
-#### arraySet.union(...otherArrays) ⇒
+##### arraySet.union(...otherArrays) ⇒
 Create Union-Set with all unique items from input sets.
 
 **Kind**: instance method of [<code>ArraySet</code>](#ArraySet)  
@@ -51,7 +51,7 @@ Create Union-Set with all unique items from input sets.
 
 <a name="ArraySet+intersection"></a>
 
-#### arraySet.intersection(...otherArrays) ⇒
+##### arraySet.intersection(...otherArrays) ⇒
 Create Intersection-Set with all common items from input sets.
 
 **Kind**: instance method of [<code>ArraySet</code>](#ArraySet)  
@@ -63,7 +63,7 @@ Create Intersection-Set with all common items from input sets.
 
 <a name="ArraySet+difference"></a>
 
-#### arraySet.difference(...otherArrays) ⇒
+##### arraySet.difference(...otherArrays) ⇒
 Create Difference-Set with all items not in input sets.
 
 **Kind**: instance method of [<code>ArraySet</code>](#ArraySet)  
@@ -75,7 +75,7 @@ Create Difference-Set with all items not in input sets.
 
 <a name="ArraySet+isSuperset"></a>
 
-#### arraySet.isSuperset(...otherArrays) ⇒
+##### arraySet.isSuperset(...otherArrays) ⇒
 Check whether array is superset of input sets.
 
 **Kind**: instance method of [<code>ArraySet</code>](#ArraySet)  
@@ -87,7 +87,7 @@ Check whether array is superset of input sets.
 
 <a name="ArraySet+isSubset"></a>
 
-#### arraySet.isSubset(...otherArrays) ⇒
+##### arraySet.isSubset(...otherArrays) ⇒
 Check whether array is subset of input sets.
 
 **Kind**: instance method of [<code>ArraySet</code>](#ArraySet)  

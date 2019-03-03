@@ -1,7 +1,7 @@
-# @hamgom95/arrayset
+## @hamgom95/arrayset
 
 Set-like Array.
 
-## API Documentation
+### API Documentation
 
 {{>main}}
